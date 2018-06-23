@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    RED.nodes.registerType('nfcpy-id',{
+        category: 'input',
+        color: '#89c3eb',
+        defaults: {
+            waitTime: {value:"1", validate:RED.validators.number()},
+            name: {value:""}
+        },
+        inputs:0,
+        outputs:1,
+        align: 'left',
+        icon: "nfc.png",
+        label: function() {
+            return this.name||"nfcpy-id";
+        },
+    oneditprepare: function(){
+        $( "#node-input-waitTime" ).spinner({min:1});
+    }
+});
+</script>
+
+<script type="text/x-red" data-template-name="nfcpy-id">
+    <div class="form-row">
+        <label for="node-input-waitTime"><i class="fa fa-clock-o"></i> waitTime</label>
+        <input id="node-input-waitTime"  value="1" style="width:50px !important"></input>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="nfcpy-id">
+    <p>Read the card ID (Mifare: UID, FeliCa: IDm) with nfcpy-id (a Python module).</p>
+    <p>Before using, install <code>nfcpy-id</code>(a Python module).</p>
+    <p>This node can't catch touchend event.</p>
+    <p><code>waitTime</code> is restart timing after touched nfcCard.</p>
+    <p><code>type</code>'s list
+        <ul>
+            <li>Type 2 -- MIFARE</li>
+            <li>Type 3 -- FeliCa</li>
+            <li>Type 4 -- MIFARE DESFire</li>
+        </ul>
+    </p>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">Card Id | string</span>
+    </dt>
+    <dt>type
+        <span class="property-type">Card Type| string</span>
+    </dt>
+    <dt>timestamp
+        <span class="property-type">timestamp | int </span>
+    </dt>
+</script>
