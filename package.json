@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-harada413/node-red-contrib-nfcpy-id.git"
+  },
   "node-red": {
     "nodes": {
       "nfcpy-id": "nfcpy-id.js"
@@ -18,6 +22,10 @@
     "node-red",
     "nfcreader"
   ],
-  "author": "k-harada",
-  "license": "ISC"
+  "author": "k-harada413",
+  "license": "Apache2.0",
+  "bugs": {
+    "url": "https://github.com/k-harada413/node-red-contrib-nfcpy-id/issues"
+  },
+  "homepage": "https://github.com/k-harada413/node-red-contrib-nfcpy-id#readme"
 }
