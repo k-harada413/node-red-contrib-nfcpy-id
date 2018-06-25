@@ -16,7 +16,7 @@
     }
   },
   "dependencies": {
-    "node-nfcpy-id": "^0.1.1"
+    "node-nfcpy-id": "^0.1.0"
   },
   "keywords": [
     "node-red",
