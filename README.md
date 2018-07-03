@@ -6,6 +6,12 @@ Before using, install `nfcpy-id`(a Python module).
 
 ## install
 
+Run the following command in the root directory of your Node-RED install
+
+```
+npm install node-red-contrib-nfcpy-id
+```
+
 ## License
 See [license](https://github.com/k-harada413/node-red-contrib-nfcpy-id/blob/master/LICENSE) (Apache License Version 2.0).
 
